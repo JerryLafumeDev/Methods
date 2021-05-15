@@ -248,3 +248,68 @@ here sum is the accumulator, current is the (current) element and 0 is the intia
 
 returns a number on how many elements are in the array.
 
+# Object Methods
+
+ 1. Keys
+
+first param is the object your are targetting, ( Object.keys(newObj) )
+when used on an object with properties, it returns an array of that objects property names
+
+
+2. Values 
+
+first param is the object your are targetting, ( Object.values(newObj) )
+when used on an object with properties, it returns an array of that objects property values
+
+
+3. Entries
+
+first param is the object your are targetting, ( Object.entries(newObj) )
+when used on an object with properties, it returns a 2D array of that objects property names and values as pairs in side each sub array.
+
+
+4. Assign
+
+first param is the object your are targetting, ( Object.assign(newObj) )
+second and every param after is an object that you want to combine with the first. if they have similar keys every keys that are the same will be raplced by the second objects key value pairs. 
+it returns the updated object
+
+
+5. Create
+
+first param is the object your are targetting, ( Object.create(obj) )
+returns a new object using the one passed in its params as a prototype.
+used like this;
+const newObj = Object.create(obj) 
+
+6. Seal
+
+first param is the object your are targetting, ( Object.seal(obj) )
+returns the obj
+new properties can not be added and existing properties can not be deleted
+but if the properties are writable you can still change their values
+
+7. Freeze
+
+first param is the object your are targetting, ( Object.freeze(obj) )
+returns the obj
+new properties can not be added and existing properties can not be deleted and existing property's values can not be changed
+
+
+8. DefineProperty
+
+first param is the object your are targetting, ( Object.defineProperty(obj) )
+second param is the property (key) you want to define / change
+third param is an object { } with a property of "value" and its value and a property "writable" and its value as a boolean
+if the second param is a property that already existed inside that object you will be able to see the change . but if it is not an existing property you won't be able to visibly see it but you can still access it with dot notation
+depending if the property you changed / added is writable or not (true or false) you will / will not be able to re-assign it's value.  
+
+9.DefineProperties
+
+first param is the object your are targetting, ( Object.defineProperty(obj) )
+second param is the property (key) you want to define / change as  an object { } with a property of "value" and its value and a property "writable" and its value as a boolean.
+this method is like defineProperty but you can update / change multiple properties and it combines the second and third param
+if the second param is a property that already existed inside that object you will be able to see the change . but if it is not an existing property you won't be able to visibly see it but you can still access it with dot notation
+depending if the property you changed / added is writable or not (true or false) you will / will not be able to re-assign it's value. 
+
+
